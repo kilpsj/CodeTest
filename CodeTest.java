@@ -15,12 +15,16 @@ import javax.swing.JOptionPane;
 import java.util.Scanner; 
 
 /**
- *
+ * This program will prompt the user to give a file path of their specified 
+ * CSV file. The program will compute and output the mean, median, sum, minimum, 
+ * maximum and standard deviation of each line from the inputted file.
  * @author Jim Kilps
  */
 public class CodeTest {
     /**
-     * @param args 
+     * @param args filename, numbers[], sum, minValue, maxValue, average,
+     * StandardDeviation
+     * 
      */
     public static void main(String[] args) 
             throws FileNotFoundException, IOException {
@@ -51,6 +55,10 @@ public class CodeTest {
         
         
     }
+    /**
+    mean() will compute the sum of an array of numbers and return the
+    * mean of those numbers.
+    */
     public static double mean(double[] m) {
     double sum = 0;
         for (int i = 0; i < m.length; i++) {
@@ -58,7 +66,9 @@ public class CodeTest {
         }
     return sum / m.length;
 }
-    
+    /**
+    median() sorts the array of numbers and return the median of the array.
+    */
     public static double median(double[] m) {
     Arrays.sort(m);
     int middle = m.length/2;
@@ -69,6 +79,9 @@ public class CodeTest {
             return (m[middle-1] + m[middle]) / 2.0;
         }
     }    
+    /**
+    sum() computes the sum of an array and returns the sum.
+    */
     public static double sum(double[] m) {
     double sum = 0;
         for (int i = 0; i < m.length; i++) {
@@ -76,6 +89,9 @@ public class CodeTest {
             }
     return sum;   
     }
+    /**
+    max() finds the max value of an array of numbers and returns that max value
+    */
     public static double max(double[] m) {
     double maxValue = m[0];
         for (int i = 1; i < m.length; i++) {
@@ -85,6 +101,9 @@ public class CodeTest {
         }
     return maxValue;
     }
+    /**
+    min() finds the min value of an array of numbers and returns that min value
+    */
     public static double min(double[] m) {
     double minValue = m[0];
         for (int i = 1; i < m.length; i++) {
@@ -94,7 +113,10 @@ public class CodeTest {
             }
     return minValue;
     }
-
+    /**
+    StandardDeviation() computes the sum and average from the array given. It
+    * computes and returns the standard deviation from those values.
+    */
     public static double StandardDeviation(double[] m) {
     double sd = 0;
     double sum = sum(m);
