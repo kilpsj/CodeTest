@@ -10,9 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collections;
 import javax.swing.JOptionPane;
-import java.util.Scanner; 
 
 /**
  * This program will prompt the user to give a file path of their specified 
@@ -22,9 +20,8 @@ import java.util.Scanner;
  */
 public class CodeTest {
     /**
-     * @param args filename, numbers[], sum, minValue, maxValue, average,
-     * StandardDeviation
-     * 
+     * @param args
+     * @throws FileNotFoundException, IOException
      */
     public static void main(String[] args) 
             throws FileNotFoundException, IOException {
@@ -56,8 +53,10 @@ public class CodeTest {
         
     }
     /**
-    mean() will compute the sum of an array of numbers and return the
-    * mean of those numbers.
+     * @param m
+     * @return mean
+     * mean() will compute the sum of an array of numbers and return the
+     * mean of those numbers.
     */
     public static double mean(double[] m) {
     double sum = 0;
@@ -67,7 +66,9 @@ public class CodeTest {
     return sum / m.length;
 }
     /**
-    median() sorts the array of numbers and return the median of the array.
+     * @param m 
+     * @return median
+     * median() sorts the array of numbers and return the median of the array.
     */
     public static double median(double[] m) {
     Arrays.sort(m);
@@ -80,7 +81,9 @@ public class CodeTest {
         }
     }    
     /**
-    sum() computes the sum of an array and returns the sum.
+     * @param m 
+     * @return sum
+     * sum() computes the sum of an array and returns the sum.
     */
     public static double sum(double[] m) {
     double sum = 0;
@@ -90,7 +93,8 @@ public class CodeTest {
     return sum;   
     }
     /**
-    max() finds the max value of an array of numbers and returns that max value
+     * @param m 
+     * max() finds the max value of an array of numbers and returns that max value
     */
     public static double max(double[] m) {
     double maxValue = m[0];
@@ -102,7 +106,10 @@ public class CodeTest {
     return maxValue;
     }
     /**
-    min() finds the min value of an array of numbers and returns that min value
+     * @param m 
+     * @return minValue
+     * min() finds the min value of an array of numbers and returns that 
+     * min value
     */
     public static double min(double[] m) {
     double minValue = m[0];
@@ -114,8 +121,10 @@ public class CodeTest {
     return minValue;
     }
     /**
-    StandardDeviation() computes the sum and average from the array given. It
-    * computes and returns the standard deviation from those values.
+     * @param m
+     * @return standardDeviation
+     * StandardDeviation() computes the sum and average from the array given. It
+     * computes and returns the standard deviation from those values.
     */
     public static double StandardDeviation(double[] m) {
     double sd = 0;
